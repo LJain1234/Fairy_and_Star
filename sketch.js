@@ -29,7 +29,7 @@ function setup() {
 	star.scale = 0.2;
 
 	fairy = createSprite(50,650);
-	fairy.addAnimation(fairyImg);
+	fairy.addAnimation("fairy",fairyImg);
 	fairy.scale = 0.25;
 
 	if(fairy.x>750){
