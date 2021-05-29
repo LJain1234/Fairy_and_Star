@@ -28,7 +28,7 @@ function setup() {
 	star.addImage(starImg);
 	star.scale = 0.2;
 
-	fairy = createSprite(50,650);
+	fairy = createSprite(50,500);
 	fairy.addAnimation("fairy",fairyImg);
 	fairy.scale = 0.25;
 
@@ -53,7 +53,10 @@ function draw() {
   star.x= starBody.position.x 
   star.y= starBody.position.y 
 
-  if(star.y>800){
+  if(star.y > 470 && starBody.position.y > 470 ){ 
+	  Matter.Body.setStatic(starBody,true); }
+  
+	  if(star.y>800){
 	  star.y=30;
 	  starBody = Bodies.circle(650 , 30 , 5 , {restitution:0.5, isStatic:true});
 	World.add(world, starBody);
